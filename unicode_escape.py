@@ -9,7 +9,8 @@ import os
 
 
 def escape(str):
-    return "".join(map(lambda char: char if char in string.printable else rf"\u{ord(char):04x}", str))
+    if str:
+      return "".join(map(lambda char: char if char in string.printable else rf"\u{ord(char):04x}", str))
 
 
 # entrypoint
